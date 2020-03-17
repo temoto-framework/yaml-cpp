@@ -25,7 +25,7 @@ set(headers
 )
 
 set(libraries
-  ${CMAKE_CURRENT_SOURCE_DIR}/yaml-cpp/build/libyaml-cpp.so.0.6.2
+  ${CMAKE_CURRENT_SOURCE_DIR}/yaml-cpp/build/libyaml-cpp.so
 )
 
 catkin_package(
