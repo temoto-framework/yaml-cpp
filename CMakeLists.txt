@@ -35,8 +35,11 @@ catkin_package(
   # DEPENDS
 )
 
+add_custom_command(TARGET yaml-cpp-062
+  POST_BUILD
+  COMMAND cp ${CMAKE_CURRENT_SOURCE_DIR}/yaml-cpp/build/libyaml-cpp.so.0.6.2  
+    ${CATKIN_DEVEL_PREFIX}/lib/libyaml-cpp.so.0.6.2
+)
+
 install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/yaml-cpp/include/yaml-cpp/
         DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION})
-
-install( FILES ${CMAKE_CURRENT_SOURCE_DIR}/yaml-cpp/build/libyaml-cpp.so 
-        DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION} )
